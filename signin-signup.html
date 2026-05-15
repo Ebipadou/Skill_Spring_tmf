@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Acme:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/signin-signup.css">
+  <title>Sign Up</title>
+</head>
+<body>
+  <!-- Sign In/ Sign Up Section -->
+  <div class="sign-con">
+    <div class="sign-up-in-header">
+        <h1 class="con-header">SkillSpring</h1>
+        <p class="con-text">Learn better, not harder.</p>
+    </div>
+
+    <div class="sign-up-toggle-con">
+      <div class="sign-up-toggle active" id="sign-up-toggle">Sign Up</div>
+      <div class="sign-in-toggle" id="sign-in-toggle">Sign In</div>
+    </div>
+
+    <div class="sign-up-in-content">
+      
+      <!-- Sign Up Form -->
+      <form id="sign-up"  class="active">
+        <!-- nae - name and email -->
+        <div class="nae-form-data-con">
+
+          <div class="form-data-alt">
+            
+            <div class="data">
+              <label for="firstname">First Name</label>
+              <input type="text" id="firstname" class="input" placeholder="Jin Fisher">
+              <span class="errors" id="name-error"></span>
+
+              <!-- <span class="material-icons">person</span> -->
+            </div>
+
+            <div class="data">
+              <label for="email">Email</label>
+              <input type="text" id="email" class="input" placeholder="jinfisher.x20@gmail.com"> 
+              <!-- <span class="material-icons">mail</span> -->
+              <span class="errors" id="email-error"></span>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="form-data">
+          <label for="password">Password</label>
+          <input type="text" id="password" class="input" placeholder="******">
+          <!-- <span class="material-icons">lock</span> -->
+          <span class="errors" id="password-error"></span>
+        </div>
+
+        <!-- <div class="form-data-student-or-mentor"> -->
+
+          <!-- <div class="form-data" id="studentormentor">
+            <p>You are a?</p> -->
+            <!-- fdsm - form data student or mentor -->
+            <!-- <div class="fdsm-con">
+              <input type="radio" name="radio"> student
+              <input type="radio" name="radio" style="margin-left: 10px;"> mentor
+            </div>
+          </div> -->
+<!-- 
+        </div> -->
+
+        <div class="form-data">
+          <button class="submit-btn" id="submit">CREATE ACCOUNT</button>
+        </div>
+
+      </form>
+
+
+      <!-- Sign In Form -->
+      <form id="sign-in" class="sign-in-form">
+
+        <div class="form-data">
+          <label for="email">Email</label>
+          <input type="email" id="email" class="input" placeholder="jinfisher.x20@gmail.com">
+          <!-- <span class="material-icons">mail</span> -->
+          <span class="errors" id="email-error"></span>
+        </div>
+
+        <div class="form-data">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="input" placeholder="******">
+          <!-- <span class="material-icons">lock</span> -->
+          <span class="errors" id="password-error"></span>  
+        </div>
+
+        <div class="form-data">
+          <button class="submit-btn" id="submit">CREATE ACCOUNT</button>
+        </div>        
+
+      </form>
+
+    </div>
+    
+  </div>
+  
+
+  <script src="./js/signin-signup.js"></script>
+</body>
+</html>
