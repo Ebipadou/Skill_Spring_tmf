@@ -35,11 +35,17 @@ h1 {
 }
 .slide-pg-1 p {
   justify-self: right;
+  width: 68px;
+  height: 48px;
+  font-size: 32px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 .slide-pg-1 .container {
   display: flex;
   width: 1063px;
   height: 434px;
+  gap: 110px;
 }
 .slide-pg-1 .container img {
   width: 434px;
@@ -50,13 +56,24 @@ h1 {
   width: 519px;
   height: 58px;
   font-weight: 600;
-  size: 48px;
+  font-size: 48px;
   font-family: "Inter", sans-serif;
 }
 .slide-pg-1 .container .final-container p {
   width: 519px;
-  height: 58px;
+  height: 96px;
   font-weight: 400;
-  size: 40px;
+  font-size: 40px;
   font-family: "Inter", sans-serif;
+}
+.slide-pg-1 .container .final-container button {
+  border-radius: 40px;
+  width: 300px;
+  height: 80px;
+  justify-content: space-between;
+  background: linear-gradient(45deg, #7c3aed, #2563eb);
+  color: #ffffff;
+  font-weight: 500;
+  font-family: "Outfit", sans-serif;
+  font-size: 24px;
 }
