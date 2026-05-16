@@ -29,6 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Setup NEXT button listeners for all slides
   setupNextButtonListeners();
+
+  // Setup SKIP button listeners
+  setupSkipButtonListeners();
 });
 
 function showSlide(index) {
@@ -80,6 +83,9 @@ function setupNextButtonListeners() {
       const nextIndex = currentSlide + 1;
       if (nextIndex < slides.length) {
         showSlide(nextIndex);
+      } else {
+        // Navigate to signin-signup page on last slide
+        window.location.href = "./signin-signup.html";
       }
     });
 
@@ -99,6 +105,16 @@ function setupNextButtonListeners() {
         duration: 300,
         easing: "easeOutQuad",
       });
+    });
+  });
+}
+
+function setupSkipButtonListeners() {
+  const skipButtons = document.querySelectorAll(".skip");
+  skipButtons.forEach((skipBtn) => {
+    skipBtn.addEventListener("click", function () {
+      // Navigate to signin-signup page when skip is clicked
+      window.location.href = "./signin-signup.html";
     });
   });
 }
