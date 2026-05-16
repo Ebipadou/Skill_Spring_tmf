@@ -285,6 +285,24 @@ h1 {
   background: #2563eb;
   border-radius: 20px;
 }
+@keyframes buttonGlow {
+  0% {
+    box-shadow:
+      0 0 10px rgba(37, 99, 235, 0.4),
+      0 0 20px rgba(124, 58, 237, 0);
+  }
+  50% {
+    box-shadow:
+      0 0 20px rgba(37, 99, 235, 0.8),
+      0 0 40px rgba(124, 58, 237, 0.6);
+  }
+  100% {
+    box-shadow:
+      0 0 10px rgba(37, 99, 235, 0.4),
+      0 0 20px rgba(124, 58, 237, 0);
+  }
+}
+
 .slide-pg-1 .container .final-container button {
   border-radius: 40px;
   width: 300px;
@@ -295,6 +313,9 @@ h1 {
   font-weight: 500;
   font-family: "Outfit", sans-serif;
   font-size: 24px;
+  animation: buttonGlow 2.5s ease-in-out infinite;
+  border: none;
+  cursor: pointer;
 }
 .two .ooo .oo h3 {
   bottom: 50px;
