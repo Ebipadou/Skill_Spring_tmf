@@ -143,7 +143,7 @@ h1 {
   font-family: "Acme", sans-serif;
   animation: move 5s linear infinite;
   font-weight: 400;
-  font-size: 96px;
+  font-size: clamp(48px, 10vw, 96px);
 }
 
 @keyframes move {
@@ -161,17 +161,26 @@ h1 {
   background-color: #f8fafc;
 }
 .slide-pg-1 .skip {
-  width: 1063px;
-  height: 50px;
+  width: 100%;
+  max-width: 1063px;
+  height: auto;
+  padding: 20px 20px 0 20px;
+  display: flex;
+  justify-content: flex-end;
 }
 .slide-pg-1 .skip p {
-  width: 68px;
-  height: 48px;
-  justify-self: right;
-  right: 20%;
-  font-size: 32px;
+  font-size: clamp(18px, 5vw, 32px);
   font-family: "Poppins", sans-serif;
   font-weight: 500;
+  margin: 0;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+.slide-pg-1 .skip p:hover {
+  background-color: rgba(124, 58, 237, 0.1);
+  transform: scale(1.05);
 }
 .slide-pg-1 .container {
   display: flex;
@@ -190,61 +199,87 @@ h1 {
   border-radius: 8px;
 }
 .slide-pg-1 .container .final-container h3 {
-  width: 519px;
   font-weight: 600;
-  font-size: 48px;
+  font-size: clamp(28px, 6vw, 48px);
   font-family: "Inter", sans-serif;
   margin: 0 0 8px 0;
+  max-width: 519px;
 }
 .slide-pg-1 .container .final-container p {
-  width: 519px;
   font-weight: 400;
-  font-size: 40px;
+  font-size: clamp(18px, 5vw, 40px);
   font-family: "Inter", sans-serif;
   margin: 0 0 16px 0;
+  max-width: 519px;
+  line-height: 1.4;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1000px) {
+/* Tablet responsive adjustments */
+@media (max-width: 1024px) {
   .slide-pg-1 .container {
     gap: 24px;
-  }
-
-  .slide-pg-1 .container .final-container h3 {
-    font-size: 36px;
     width: 100%;
-  }
-
-  .slide-pg-1 .container .final-container p {
-    font-size: 24px;
-    width: 100%;
+    padding: 0 20px;
   }
 }
 
-@media (max-width: 600px) {
-  h1 {
-    font-size: 48px;
-  }
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
   .slide-pg-1 .container {
     flex-direction: column;
-    padding: 24px;
+    padding: 20px;
+    gap: 20px;
   }
 
   .slide-pg-1 .container img {
-    max-width: 320px;
+    max-width: 100%;
+    height: auto;
   }
 
-  .slide-pg-1 .container .final-container h3 {
-    font-size: 28px;
-  }
-
-  .slide-pg-1 .container .final-container p {
-    font-size: 18px;
+  .slide-pg-1 .container .final-container {
+    width: 100%;
+    gap: 16px;
   }
 
   .slider-button {
     width: 100%;
     justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .loading-text {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-pg-1 .container {
+    padding: 16px;
+  }
+
+  .slide-pg-1 .skip p {
+    font-size: 16px;
+    padding: 6px 12px;
+  }
+
+  .loading-spinner {
+    width: 48px;
+    height: 48px;
+    border-width: 3px;
+  }
+
+  .slider-button .dots {
+    gap: 8px;
+  }
+
+  .slider-button .dot {
+    width: 16px;
+    height: 16px;
+  }
+
+  .slider-button .dot.active {
+    width: 32px;
+    height: 16px;
   }
 }
 .slide-pg-1 .container .final-container {
@@ -305,17 +340,29 @@ h1 {
 
 .slide-pg-1 .container .final-container button {
   border-radius: 40px;
-  width: 300px;
-  height: 80px;
+  width: clamp(200px, 80vw, 300px);
+  height: clamp(50px, 12vw, 80px);
   justify-content: space-between;
   background: linear-gradient(45deg, #7c3aed, #2563eb);
   color: #ffffff;
   font-weight: 500;
   font-family: "Outfit", sans-serif;
-  font-size: 24px;
+  font-size: clamp(16px, 4vw, 24px);
   animation: buttonGlow 2.5s ease-in-out infinite;
   border: none;
   cursor: pointer;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.slide-pg-1 .container .final-container button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+}
+
+.slide-pg-1 .container .final-container button:active {
+  transform: translateY(-1px);
 }
 .two .ooo .oo h3 {
   bottom: 50px;
