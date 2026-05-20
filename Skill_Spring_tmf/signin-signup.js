@@ -94,7 +94,6 @@ function validateSignIn() {
   if (isValid) {
     alert("Sign In successful! (Demo)");
     window.location.href = "/discover.html";
-
   }
 }
 

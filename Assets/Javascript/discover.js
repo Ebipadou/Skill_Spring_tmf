@@ -130,9 +130,3 @@ searchBtn.addEventListener("click", () => {
   );
 
 });
-
-
-
-
-
-// active sidebar
