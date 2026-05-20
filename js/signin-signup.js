@@ -66,6 +66,8 @@ function validateSignUp() {
 
   if (isValid) {
     alert("Sign Up successful! (Demo)");
+    signInForm.classList.add("active");
+    signUpForm.classList.remove("active");
   }
 }
 
@@ -91,10 +93,12 @@ function validateSignIn() {
 
   if (isValid) {
     alert("Sign In successful! (Demo)");
+    window.location.href = "/discover.html";
+
   }
 }
 
-// Attach event listeners to buttons
+// Interactive Buttons
 submitSignup.addEventListener("click", (e) => {
   e.preventDefault();
   validateSignUp();
